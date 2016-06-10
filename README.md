@@ -1,9 +1,9 @@
 Steps to deploy on AWS
 -----------------------
 
-1. Launch New Instance: Ubuntu 64-bit
-2. Configure Security for Inbound HTTP calls.
-3. SSH to the production machine and run:
++ Launch New Instance: Ubuntu 64-bit
++ Configure Security for Inbound HTTP calls.
++ SSH to the production machine and run:
 
 ```
 sudo apt-get update
@@ -11,7 +11,7 @@ sudo apt-get install npm
 sudo npm install npm -g
 ```
 
-4. Install Correct Node Version (0.10.43)
++ Install Correct Node Version (0.10.43)
 
 ```
 sudo apt-get install build-essential libssl-dev
@@ -21,39 +21,39 @@ nvm install 0.10.43
 ln -s ~/.nvm/0.10.43/bin/node /usr/bin/node
 ```
 
-5. Check Node Version:
++ Check Node Version:
 
 ```
 node -v
 ```
 
-6. Deploy with MUP from local machine:
++ Deploy with MUP from local machine:
 
 ```
 DEBUG=* mup setup
 DEBUG=* mup deploy
 ```
 
-7. SSH to the production machine and run:
++ SSH to the production machine and run:
 
 ```
 sudo chown -R ubuntu:root /opt/in-play-api/*
 sudo vi /opt/in-play-api/app/package.json
 ```
 
-8. Add the following dependency:
++ Add the following dependency:
 
 ```
 "phantom": "2.1.2"
 ```
 
-9. Install NPM Dependencies:
++ Install NPM Dependencies:
 
 ```
 (cd programs/server && npm install)
 ```
 
-10. From local machine run:
++ From local machine run:
 
 ```
 mup stop
