@@ -1,0 +1,16 @@
+{
+  "name": "in-play-api",
+  "description": "In-Play API Project",
+  "version" : "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/galmail/in-play-api.git"
+  },
+  "private": true,
+  "scripts": {
+    "start": "meteor run"
+  },
+  "dependencies": {
+    "meteor-node-stubs": "~0.2.0"
+  }
+}
